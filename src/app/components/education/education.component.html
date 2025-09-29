@@ -1,0 +1,35 @@
+<section id="education" class="section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Education & Certifications</h2>
+      <p>My academic journey and continuous learning achievements</p>
+    </div>
+    
+    <div class="education-content">
+      <div class="education-section fade-in">
+        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="education-list">
+          <div class="education-item card" *ngFor="let edu of education">
+            <div class="education-header">
+              <h4>{{ edu.degree }}</h4>
+              <span class="duration">{{ edu.duration }}</span>
+            </div>
+            <h5>{{ edu.field }}</h5>
+            <p>{{ edu.description }}</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="certifications-section fade-in">
+        <h3><i class="fas fa-certificate"></i> Certifications</h3>
+        <div class="certifications-list">
+          <div class="certification-item card" *ngFor="let cert of certifications">
+            <h4>{{ cert.title }}</h4>
+            <div class="issuer">{{ cert.issuer }}</div>
+            <p>{{ cert.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

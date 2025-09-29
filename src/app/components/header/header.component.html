@@ -1,0 +1,27 @@
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <h3 class="text-gradient">Kavitha</h3>
+      </div>
+      
+      <nav class="nav" [class.nav-open]="isMenuOpen">
+        <ul class="nav-list">
+          <li><a href="#hero" (click)="scrollToSection('hero')">Home</a></li>
+          <li><a href="#about" (click)="scrollToSection('about')">About</a></li>
+          <li><a href="#experience" (click)="scrollToSection('experience')">Experience</a></li>
+          <li><a href="#education" (click)="scrollToSection('education')">Education</a></li>
+          <li><a href="#skills" (click)="scrollToSection('skills')">Skills</a></li>
+          <li><a href="#projects" (click)="scrollToSection('projects')">Projects</a></li>
+          <li><a href="#contact" (click)="scrollToSection('contact')">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <button class="menu-toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

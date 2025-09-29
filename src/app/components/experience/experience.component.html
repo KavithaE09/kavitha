@@ -1,0 +1,29 @@
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Work Experience</h2>
+      <p>My professional journey and the experiences that shaped my skills</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="experience-item fade-in" *ngFor="let exp of experiences; let i = index">
+        <div class="timeline-marker">
+          <div class="marker-inner"></div>
+        </div>
+        
+        <div class="experience-content card">
+          <div class="experience-header">
+            <h3>{{ exp.position }}</h3>
+            <span class="duration">{{ exp.duration }}</span>
+          </div>
+          
+          <p class="description">{{ exp.description }}</p>
+          
+          <div class="skills-used">
+            <span class="skill-tag" *ngFor="let skill of exp.skills">{{ skill }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

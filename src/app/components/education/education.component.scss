@@ -1,0 +1,130 @@
+#education {
+  background: url('/assets/education-bg.png') center/cover no-repeat;
+  background-attachment: fixed;
+  position: relative;
+}
+
+#education::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 1;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.education-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.education-section h3,
+.certifications-section h3 {
+  font-size: 1.8rem;
+  color: var(--text-dark);
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.education-section h3 i,
+.certifications-section h3 i {
+  color: var(--primary-purple);
+  font-size: 1.5rem;
+}
+
+.education-list,
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.education-item,
+.certification-item {
+  transition: all 0.3s ease;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.education-item h4,
+.certification-item h4 {
+  font-size: 1.3rem;
+  color: var(--text-dark);
+  margin: 0;
+  flex: 1;
+  font-weight: 600;
+}
+
+.education-item h5 {
+  font-size: 1.1rem;
+  color: var(--primary-purple);
+  margin: 0 0 15px 0;
+  font-weight: 500;
+}
+
+.duration {
+  background: var(--soft-blue);
+  color: var(--light-blue);
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.issuer {
+  color: var(--primary-pink);
+  font-weight: 500;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.education-item p,
+.certification-item p {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 968px) {
+  .education-content {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-section h3,
+  .certifications-section h3 {
+    font-size: 1.5rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .education-item h4,
+  .certification-item h4 {
+    font-size: 1.1rem;
+  }
+}

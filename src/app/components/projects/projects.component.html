@@ -1,0 +1,59 @@
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-title fade-in">
+      <h2>Featured Projects</h2>
+      <p>A showcase of my learning journey and academic projects as a fresher developer</p>
+    </div>
+    
+    <div class="projects-grid">
+      <div class="project-card fade-in" *ngFor="let project of projects">
+        <div class="project-image">
+          <img [src]="project.image" [alt]="project.title">
+          <div class="project-overlay">
+            <div class="project-links">
+              <a [href]="project.githubLink" target="_blank" class="project-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a [href]="project.liveLink" class="project-link">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-content">
+          <div class="project-header">
+            <h3>{{ project.title }}</h3>
+            <div class="project-category">{{ project.category }}</div>
+          </div>
+          
+          <p class="project-description">{{ project.description }}</p>
+          
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          
+          <div class="project-actions">
+            <a [href]="project.githubLink" target="_blank" class="btn btn-outline">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+            <a [href]="project.liveLink" class="btn btn-primary">
+              <i class="fas fa-eye"></i>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="projects-cta fade-in">
+      <h3>More Projects Coming Soon!</h3>
+      <p>As a passionate fresher, I'm continuously learning and building new projects. Follow my journey and let's connect!</p>
+      <button class="btn btn-primary" (click)="scrollToContact()">
+        <i class="fas fa-envelope"></i>
+        Let's Connect
+      </button>
+    </div>
+  </div>
+</section>
