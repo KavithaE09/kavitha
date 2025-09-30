@@ -31,7 +31,7 @@ export class ProjectsComponent {
       category: 'Learning Project',
       image: '/assets/travel-planner.png',
       githubLink: 'https://github.com/KavithaE09/tamizhagam',
-      liveLink: 'https://tamizhagam.vercel.app/',
+      liveLink: '',
       icon: 'fas fa-plane'
     }
   ];
